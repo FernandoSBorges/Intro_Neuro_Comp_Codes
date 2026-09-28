@@ -40,7 +40,7 @@ extern double hoc_Exp(double);
 	/*SUPPRESS 762*/
 	/*SUPPRESS 763*/
 	/*SUPPRESS 765*/
-	 extern double *getarg();
+	 extern double *getarg(int);
  static double *_p; static Datum *_ppvar;
  
 #define t nrn_threads->_t
@@ -277,7 +277,7 @@ extern void _cvode_abstol( Symbol**, double*, int);
   hoc_register_dparam_semantics(_mechtype, 5, "k_ion");
  	hoc_register_cvode(_mechtype, _ode_count, 0, 0, 0);
  	hoc_register_var(hoc_scdoub, hoc_vdoub, hoc_intfunc);
- 	ivoc_help("help ?1 hh2 /home/fernando/Dropbox/Biestabilidade-HH/Fig1/fernando/Neuron/PospischilEtAl2008/HH_traub.mod\n");
+ 	ivoc_help("help ?1 hh2 /home/fernando/Dropbox/UEPG/Intro_Neuro_Comp_Codes/one_neuron/Neuron/PospischilEtAl2008/HH_traub.mod\n");
  hoc_register_limits(_mechtype, _hoc_parm_limits);
  hoc_register_units(_mechtype, _hoc_parm_units);
  }
@@ -533,7 +533,7 @@ _first = 0;
 }
 
 #if NMODL_TEXT
-static const char* nmodl_filename = "/home/fernando/Dropbox/Biestabilidade-HH/Fig1/fernando/Neuron/PospischilEtAl2008/HH_traub.mod";
+static const char* nmodl_filename = "/home/fernando/Dropbox/UEPG/Intro_Neuro_Comp_Codes/one_neuron/Neuron/PospischilEtAl2008/HH_traub.mod";
 static const char* nmodl_file_text = 
   "TITLE Hippocampal HH channels\n"
   ":\n"
